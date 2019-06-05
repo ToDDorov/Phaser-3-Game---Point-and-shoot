@@ -1,0 +1,15 @@
+### JetBrains
+.idea/
+
+### Node
+node_modules/
+build/
+dist/
+
+# Logs
+#*.log
+
+### Project specific
+*.suo
+*.js.map
+*.js

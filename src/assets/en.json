@@ -1,0 +1,6 @@
+{
+  "restartButton": "RESTART",
+  "quitButton": "QUIT",
+  "score": "Score: {0}",
+  "lives": "Lives: {0}"
+}
