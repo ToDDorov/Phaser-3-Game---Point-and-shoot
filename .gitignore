@@ -12,3 +12,5 @@ dist/
 *.suo
 *.js.map
 *.js
+
+!phaser/phaser.js
