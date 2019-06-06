@@ -21,8 +21,10 @@ class Player extends Phaser.GameObjects.Sprite {
     }
 
     /**
-     * getBullet method for ... getting a bullet
+     * Gets a bullet from the bullets array
+     * @method getBullet
      * @returns {Bullet}
+     * @public
      */
     public getBullet(): Bullet {
         return this.bullets.get().setActive(true).setVisible(true);

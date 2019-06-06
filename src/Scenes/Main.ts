@@ -105,9 +105,11 @@ class Main extends Phaser.Scene {
     }
 
     /**
-     * onEnemyHit function for when a bullet and enemy have collided
+     * Handles when a bullet and enemy collide
+     * @function onEnemyHit
      * @param bulletHit The bullet which has hit the monster
      * @param monster The monster which got hit
+     * @private
      */
     private onEnemyHit(bulletHit: Bullet, monster: Enemy): void {
         if (bulletHit.active == true && monster.active == true) {
@@ -137,7 +139,9 @@ class Main extends Phaser.Scene {
     }
 
     /**
-     * addMonster function responsible for creating new monsters and pooling them
+     * Responsible for creating new monsters and pooling them
+     * @function addMonster
+     * @private
      */
     private addMonster(): void {
         let monster: Enemy;
@@ -175,8 +179,10 @@ class Main extends Phaser.Scene {
     }
 
     /**
-     * onMonsterOutOfBounds function handling what happens when monster leaves the screen
+     * Handles what happens when monster leaves the screen
+     * @function onMonsterOutOfBounds
      * @param monster {Enemy} Monster which left the screen
+     * @private
      */
     private onMonsterOutOfBounds(monster: Enemy): void {
         this.lives--;
@@ -200,7 +206,9 @@ class Main extends Phaser.Scene {
     }
 
     /**
-     * transitionToRestart function responsible for scene change.
+     * Changes scene to Restart
+     * @function transitionToRestart
+     * @private
      */
     private transitionToRestart(): void {
         if (this.backgroundMusic.isPlaying) {
@@ -212,8 +220,10 @@ class Main extends Phaser.Scene {
     }
 
     /**
-     * destroyMonster function for removing monster from monsterGroup and destroying it
+     * Removes monster from monsterGroup and destroying it
+     * @function destroyMonster
      * @param monster {Enemy} Monster to be destroyed
+     * @private
      */
     private destroyMonster(monster: Enemy): void {
         this.monsterGroup.killAndHide(monster);
@@ -226,14 +236,18 @@ class Main extends Phaser.Scene {
     }
 
     /**
-     * setScoreText function for updating score text
+     * Updates score text
+     * @function setScoreText
+     * @private
      */
     private setScoreText(): void {
         this.scoreText.setText(Localizer.getString("score", [this.score.toString()]));
     }
 
     /**
-     * setLivesText function for updating lives text
+     * Updates lives text
+     * @function setLivesText
+     * @private
      */
     private setLivesText(): void {
         this.livesText.setText(Localizer.getString("lives", [this.lives.toString()]));

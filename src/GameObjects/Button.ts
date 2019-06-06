@@ -57,7 +57,9 @@ class Button extends Phaser.GameObjects.Container {
     }
 
     /**
-     * OnHoverOn method for changing the button colors to lighter ones
+     * Changes the button colors to lighter ones
+     * @method onHoverOn
+     * @private
      */
     private onHoverOn(): void {
         let fill: number = GraphicUtils.fromWebColor(GraphicUtils.lightenHex(this.fillColor, 20));
@@ -74,7 +76,9 @@ class Button extends Phaser.GameObjects.Container {
     }
 
     /**
-     * OnHoverOut method for returning button colors to original ones
+     * Returns button colors to original ones
+     * @method onHoverOut
+     * @private
      */
     private onHoverOut(): void {
         let fill: number = GraphicUtils.fromWebColor(GraphicUtils.darkenHex(this.fillColor, 0));
@@ -89,7 +93,9 @@ class Button extends Phaser.GameObjects.Container {
     }
 
     /**
-     * OnButtonPress method calling the give function to the button class
+     * Calls the give function to the button class
+     * @method onButtonPress
+     * @private
      */
     private onButtonPress(): void {
         this.onSelectSound.play();

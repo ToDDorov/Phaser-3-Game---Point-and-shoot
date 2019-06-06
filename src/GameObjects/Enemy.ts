@@ -38,15 +38,19 @@ class Enemy extends Phaser.GameObjects.Image {
     }
 
     /**
-     * getHealth method
+     * Get the current enemy health
+     * @method getHealth
      * @returns {number}
+     * @public
      */
     public getHealth(): number {
         return this.health;
     }
 
     /**
-     * takeDamage method for reducing enemy health and emitting particles from hearts positions
+     * Reduces enemy health and emits particles from hearts positions
+     * @method takeDamage
+     * @public
      */
     public takeDamage(): void {
         let particleX: number = 100 - (50 * this.health);
@@ -71,7 +75,9 @@ class Enemy extends Phaser.GameObjects.Image {
     }
 
     /**
-     * kill method tweening the enemy and destroying it after tween has completed
+     * Tweens the enemy and destroys it after tween has completed
+     * @method kill
+     * @public
      */
     public kill(): void {
         this.scene.tweens.add({

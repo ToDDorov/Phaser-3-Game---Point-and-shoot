@@ -24,7 +24,6 @@ class Localizer {
         this.getInstance().localeData = this.getInstance().phaserGame.cache.json.get("locale");
     }
 
-    //public static getString(name:string, param:string[]);
     public static getString(name: string, param?: string[]) {
         let res: string = null;
         res = this.getInstance().localeData[name];
@@ -39,8 +38,6 @@ class Localizer {
                 res = res.replace("{" + i + "}", param[i]);
             }
         }
-
-        //res = res.Replace("\n", System.Environment.NewLine);
 
         return res;
     }

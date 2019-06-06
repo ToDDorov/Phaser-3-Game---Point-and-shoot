@@ -26,10 +26,11 @@ class Bullet extends Phaser.GameObjects.Image {
     }
 
     /**
-     * Fire method setting the speed and rotation
-     *
+     * Set the speed and rotation
+     * @method fire
      * @param player - get the player images
      * @param pointer - capture active pointer coordinates
+     * @public
      */
     public fire(player: Phaser.GameObjects.Image, pointer: Phaser.Math.Vector2): void {
         this.setPosition(player.x, player.y);

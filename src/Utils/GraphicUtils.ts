@@ -1,23 +1,29 @@
 class GraphicUtils {
-    // #FBE051 -> 0xFBE051
+    // #FFFFFF -> 0xFFFFFF
     /**
-     * fromWebColor function converting hex to number color
+     * Converts hex to number color
+     * @method fromWebColor
      * @param col {string} web color
      * @returns {number} number color
+     * @static
+     * @public
      */
-    static fromWebColor(col: string): number {
+    public static fromWebColor(col: string): number {
         let res: string = col.substring(1);
 
         return parseInt(res, 16);
     }
 
     /**
-     * lightenHex function
+     * Changes color to lighter one
+     * @method lightenHex
      * @param color {string} color to be lighten
      * @param value {number} how much to lighten
      * @returns {string}
+     * @static
+     * @public
      */
-    static lightenHex(color: string, value: number): string {
+    public static lightenHex(color: string, value: number): string {
         let phaserCol: Phaser.Display.Color = Phaser.Display.Color.HexStringToColor(color).lighten(value);
         let stringColor: string = Phaser.Display.Color.RGBToString(phaserCol.red, phaserCol.green, phaserCol.blue, phaserCol.alpha);
 
@@ -25,12 +31,15 @@ class GraphicUtils {
     }
 
     /**
-     * darkenHex function
+     * Changes color to darker one
+     * @method darkenHex
      * @param color {string} color to be darken
      * @param value {number} how much to darken
      * @returns {string}
+     * @static
+     * @public
      */
-    static darkenHex(color: string, value: number): string {
+    public static darkenHex(color: string, value: number): string {
         let phaserCol: Phaser.Display.Color = Phaser.Display.Color.HexStringToColor(color).darken(value);
         let stringColor: string = Phaser.Display.Color.RGBToString(phaserCol.red, phaserCol.green, phaserCol.blue, phaserCol.alpha);
 
